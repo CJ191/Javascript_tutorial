@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- IF Statement -->
+
+    <script>
+        var x=10
+        var y=20
+
+        if(x > y){
+            document.write(x,' is greatest')
+        }
+        else{
+            document.write(y,' is greatest')
+        }
+    </script> <br><br>
+
+    <!-- IF ELSE Statement -->
+
+    <script>
+        var x=10
+        var y=20
+        var z=30
+        if(x > y){
+            document.write(x,' is greatest')
+        }
+        else if(y > z){
+            document.write(y,' is greatest')
+        }
+        else{
+            document.write(z,' is greatest')
+        }
+    </script> <br><br>
+
+    <!-- SWITCH Statement -->
+<h1 style="color: green;" id="id1"></h1>
+    <script>
+        var day;
+        switch(new Date().getDay()){
+            case 0:
+                day='SUNDAY';
+                break;
+            case 1:
+                day='MONDAY';
+                break;
+            case 2:
+                day='TUESDAY';
+                break;
+            case 3:
+                day='WEDNESDAY';
+                break;
+            case 4:
+                day='THURSDAY';
+                break;
+            case 5:
+                day='FRIDAY';
+                break;
+            case 6:
+                day='SATUARDAY';
+                break;
+            default:
+                day='invalid';
+                break;
+        }
+        
+        document.getElementById('id1').innerHTML=day;
+    </script> <br><br>
+
+    <!-- for loop -->
+    
+    <!-- <h1 style="color: red;" id="1d2"></h1> -->
+    <script>
+        for(let i=0;i<10;i++){
+            // document.getElementById('id2').innerHTML=i;
+            document.write('CJ'+'<br>')
+        }
+    </script>  <br><br>
+
+    <h1 onmouseover="document.getElementById('id3').style.color='red' " id="id3">Welcome</h1>
+
+    <h1 onmouseover="this.style.color='red';style.background='yellow' " onmouseout="this.style.color='black';style.background='none'">
+        Welcome
+    </h1>
+
+    <h1 onmouseout="this.style.color='red' ">Welcome</h1>
+
+    <select onchange="alert('Selection Changed!!!')">
+        <option value="one">One</option>
+        <option value="two">Two</option>
+    </select>
+
+<br><br>
+
+    <form action="" onsubmit="alert('Submitted')">
+        <input type="text" placeholder="Enter Your Name">
+        <input type="submit" value="Submit">
+    </form>
+
+<br><br>
+
+    <input type="text" onchange="alert('Alert!!!!!!!!!!')">
+
+    <br><br>
+
+    <form action="" onsubmit="alert('Submitted')">
+        <input type="text" placeholder="Enter Your Name">
+        <button type="submit">Submit</button>
+    </form>
+
+<br><br>
+
+    <h1 ondblclick="this.style.background='yellow'" onmouseout="this.style.background='none'">Double Click</h1>
+
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br>
+</body>
+</html>
