@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        x='Vishnu'
+        document.write(x,'<br><br>')
+    
+        x='"name is "CJ""'
+        document.write(x,'<br><br>')
+
+        x="Juzt_CJ_"
+        document.write(x,'<br><br>')
+        document.write(x.length,'<br><br>')
+        document.write(x[0],'<br><br>')
+        document.write(x[x.length -1],'<br><br>')
+        
+        y=x.charAt(3)
+        document.write(y,'<br><br>')
+
+        y=x.at(1)
+        document.write(y,'<br><br>')
+
+        y=x.charAt(x.length -1)
+        document.write(y,'<br><br>')
+
+        y=x.at(-1)
+        document.write(y,'<br><br>')
+
+        y=x.slice(3)
+        document.write(y,'<br><br>')
+
+        y=x.slice(2,6)                 //includes the starting index and excludes ending char
+        document.write(y,'<br><br>')
+
+        y=x.slice(-8,-5)
+        document.write(y,'<br><br>')
+
+        y=x.slice(-8,6)
+        document.write(y,'<br><br>')
+
+        y=x.substring(2,6)
+        document.write(y,'<br><br>')
+
+        y=x.substring(-8,5)
+        document.write(y,'<br><br>')
+
+        y=x.substring(2,-2)            //asendi or decsending koduthalum default aayit asending mathrame edukkku
+        document.write(y,'<br><br>')
+
+        y=x.substr(2,4)                //starting pointum oine lenghtum annu ithi
+        document.write(y,'<br><br>')
+
+        y=x.toUpperCase()
+        document.write(y,'<br><br>')
+
+        y=x.toLowerCase()
+        document.write(y,'<br><br>')
+
+        z="    Vishnu A     "
+        console.log(z)
+
+        y=z.trim()          //both side space remove cheyum
+        console.log(y)
+
+        y=z.trimStart()     //starting side space remove cheyum
+        console.log(y)
+
+        y=z.trimEnd()       //ending side space remove cheyum
+        console.log(y)
+
+        w='CJ'
+        y=w.padStart(8,'%')     //length, character
+        document.write(y,'<br><br>')
+
+        y=w.padEnd(5,'!')
+        document.write(y,'<br><br>')
+
+        q="Vishnu CJ"
+        document.write(q,'<br><br>')
+
+        y=q.replace('Vi','vI')          //what, to what
+        document.write(y,'<br><br>')
+
+        r="Call me cj, CALL ME CJ"
+        document.write(r,'<br><br>')
+
+        y=r.replaceAll('cj','vishnu')
+        document.write(y,'<br><br>')
+
+        t="CALL ME CJ, CALL ME CJ"
+        document.write(t,'<br><br>')
+
+        y=t.replaceAll('CJ','VISHNU')
+        document.write(y,'<br><br>')
+
+
+    </Script>
+</body>
+</html>
