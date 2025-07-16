@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Output -->
+
+    <script>
+        document.write('Welcome to JavaScript')
+    </script>
+        <button onclick="document.write('New Content')">
+            Over Write
+        </button>
+
+    <br><br>
+
+    <button onclick="window.alert('This is an Alert')">
+        Alert
+    </button>
+<br><br>
+    <button onclick="alert('This is an Another Alert')">
+        Alert
+    </button>
+
+    <script>
+        console.log('Heloooooooo')
+    </script>
+<br><br>
+    <button onclick="window.print()">
+        Print
+    </button>
+
+<br><br>
+
+    <!-- Variables -->
+
+    <script>
+        // x=5;
+        // var y;
+        // y=10;
+        // let c;
+        // const x=10;
+
+        {
+            var x=10;
+            let y=5;
+            console.log('inside block X: ',x)
+            console.log('inside block Y: ',y)
+        }
+            console.log('Outside block X: ',x)
+            // console.log('Outside block Y: ',y) //y wont work because y is using let
+
+    </script>
+    <script>
+        let x='Vishnu';
+        let x=10;
+//redeclaration possible alla check the console
+        var x='Vishnu';
+        var x=10;
+    </script>
+    <script>
+        let x='Vishnu'
+        console.log(x)
+            {
+                let x='CJ'
+                console.log(x)      //not possible cause let is block scope
+            }
+        console.log(x)
+    </script>
+
+    <script>
+        var x='Vishnu'
+        console.log(x)
+            {
+                var x='CJ'
+                console.log(x)
+            }
+        console.log(x)
+    </script>
+<br><br>
+
+    <h3 style="color: red;" id="id1"></h3>
+    <script>
+        x='Vishnu';
+        document.getElementById('id1').innerHTML=x
+        var x;                                          //ithu mathram work cheyum
+    </script>
+
+    <script>
+        x='CJ';
+        document.getElementById('id1').innerHTML=x
+        let x;                                          //ithu work cheyilla karanam ith local/block scope aanu
+    </script>
+
+    <script>
+        x='CJ';
+        document.getElementById('id1').innerHTML=x
+        const x='CJ';                                        //ithu work cheyilla karanam ith local/block scope aanu    
+    </script>
+
+    <script>
+        var x='CJ';
+        // var y='Vishnu';
+
+        document.getElementById('id1').innerHTML=x+' '+y
+
+        var y='Vishnu';
+    </script>
+</body>
+</html>
