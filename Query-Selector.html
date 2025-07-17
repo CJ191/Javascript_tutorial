@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="query">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+    <h2 class="query">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+    <h2 class="query">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+    <h2 class="query">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+    <h2 class="query">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+    <h2 class="query">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+
+    <script>
+        document.querySelector('.query').innerHTML='Query Selector Worked'; //first occurence mathre mattu
+
+        element=document.querySelectorAll('.query')
+            for(let u of element){
+                u.innerHTML='All Occurance changed' //all accurance change aakkum
+            }
+    </script>
+
+    <img src="image/angel.jpg" id="img">
+
+    <script>
+        document.getElementById('img').src='image/devil.jpg';
+    </script>
+
+
+</body>
+</html>
