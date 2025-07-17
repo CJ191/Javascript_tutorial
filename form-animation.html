@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="login" onsubmit="validform()">
+        <label for="UName">User Name</label>
+        <input type="text" name="UName" placeholder="Enter Your User Name">
+        <br><br>
+        <label for="Pass">Password</label>
+        <input type="password" name="Pass" placeholder="Enter Your Password">
+        <br><br>
+        <input type="submit">
+    </form>
+
+    <script>
+        function validform(){
+            x=document.forms['login']['UName'].value;
+            y=document.forms['login']['Pass'].value;
+
+            if((x=='')||(y=='')){
+                alert('Data Cannot be Null')
+            }
+        }
+    </script>
+
+    <div id="1" style="width: 100px; height: 100px; background-color: black; position: absolute;"></div>
+    <div id="2" style="width: 100px; height: 100px; background-color: black; position: absolute;"></div>
+    <div id="3" style="width: 150px; height: 100px; background-color: red; position: absolute; top: 300px;"></div>
+    <div id="4" style="width: 150px; height: 100px; background-color: red; position: absolute; top: 400px;"></div>
+
+
+
+
+    <script>
+        position1=0;
+        box1 = document.getElementById('1');
+        move1 = setInterval(function(){
+            if(position1>=500){
+                clearInterval(move1)
+            }
+            else{
+                position1++;
+                box1.style.left=position1 + 'px';
+            }
+        },5)
+
+        position2=0;
+        box2 = document.getElementById('2');
+        move2 = setInterval(function(){
+            if(position2>=750){
+                clearInterval(move2)
+            }
+            else{
+                position2++;
+                box2.style.left=position2 + 'px';
+            }
+        },5)
+
+        position3=0;
+        box3 = document.getElementById('3');
+        move3 = setInterval(function(){
+            if(position3>=600){
+                clearInterval(move3)
+            }
+            else{
+                position3++;
+                box3.style.left=position3 + 'px';
+            }
+        },5)
+
+        position4=0;
+        box4 = document.getElementById('4');
+        move4 = setInterval(function(){
+            if(position4>=600){
+                return position4=0;
+            }
+            else{
+                position4++;
+                box4.style.left=position4 + 'px';
+            }
+        },5)
+
+    </script>
+
+    <button id="btnevent">click</button>
+    <h2 id="output"></h2>
+
+    <script>
+        document.getElementById('btnevent').addEventListener('click',function(){
+            document.getElementById('output').innerHTML='Yo!!!!'
+        })
+    </script>
+</body>
+</html>
