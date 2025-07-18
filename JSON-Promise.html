@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="1"></h1>
+    <script>
+        x={"name":"CJ","place":"Kozhikode","phone":[9645147354]};
+        console.log(x);
+        console.log(typeof(x));
+
+        function asynch(){
+            document.getElementById('1').innerHTML='Haloooo'
+        }
+        setTimeout(asynch,2000);
+
+        console.log('Start');
+        setTimeout(()=>{
+            console.log('HAii');
+        })
+        console.log('End');
+
+        promise = new Promise(function(resolve,reject){
+            let success = true;
+            if (success){
+                resolve('Promise Fullfilled');
+            }
+            else{
+                reject('promise Rejected');
+            }
+        })
+
+        promise.then(function(result){
+            console.log(result)
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+
+        let waiting = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                resolve('Resolved')
+            },3000)
+        })
+        waiting.then(function(message){
+            console.log(message);
+        })
+
+        function waitTwoSeconds(){
+            return new Promise(resolve=>{
+                resolve('resolved 2 seconds')
+            },2000)
+        }
+
+        async function showMessage() {
+            console.log('satrt.....')
+            message = await waitTwoSeconds();
+            console.log(message);
+            console.log('end..');
+        }
+
+        showMessage();
+
+
+
+    </script>
+        <!-- Document  Object Model(dom) -->
+
+        <h2 id="id1">Haloooo</h2>
+        <h2 class="class1">HAiiiiii</h2>
+        <button onclick="change()">Click to change</button>
+        <script>
+            function change(){
+                document.getElementById('id1').innerHTML='Using ID';
+                document.getElementsByClassName('')
+                document.getElementsByClassName('class1')[0].innerHTML='Using Class'
+            }
+
+        </script>
+
+</body>
+</html>
