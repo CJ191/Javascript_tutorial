@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Show Name</button>
+
+    <script>
+        // "use strict";
+ 
+        let a=10;
+        let b=10;
+
+        console.log(`sum of ${a} and ${b} is ${a+b}`);
+
+        
+        let x=10;
+        console.log(x);
+
+        function wish(wish){
+            console.log(`${wish},${this.name}`);
+        }
+
+        person1={"name":"vishnu"}
+        person2={"name":"achu"}
+        wish.call(person1, 'haiii');
+        wish.apply(person2,['haii','hello']);
+        z=wish.bind(person1,'hello');
+        z();
+
+        user={
+            name:'achu',
+            showName:function(){
+                alert('haiii '+this.name)
+            }
+        }
+
+        x=user.showName.bind(user);
+        // document.getElementById('showbtn').addEventListener('click',user.showName())
+        document.getElementById('btn').addEventListener('click',x)
+    </script>
+
+</body>
+</html>
